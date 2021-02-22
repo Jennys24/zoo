@@ -9,8 +9,12 @@ const router = Router();
 // en caso de que no, lo mandamos al login
 function checkLogin(req, res, next) {
   console.log('verificando que el usuario está logueado');
-  next();
-}
+  if (req.session.user == null){
+    return res.redirect('/login');
+  }
+    next();
+
+};
 
 
 router.get('/', checkLogin, async (req, res) => {
