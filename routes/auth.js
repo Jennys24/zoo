@@ -14,6 +14,11 @@ router.get('/login', async (req, res) => {
 
 // 2. Ruta para registrar nuevos usuarios (formulario de registro)
 router.post('/register', async (req, res) => {
+  const user = await User.findOne({where: {email: req.body.email}});
+  if (user != null){
+    req.flash('errors', 'Este mail ya se encuentra registrado');
+    return res.redirect('/login');
+  }
   // Primero encriptamos la contraseña
   const password_encrypted = await bcrypt.hash(req.body.password, 10);
 
@@ -58,7 +63,8 @@ router.post('/login', async (req, res) => {
 
   // Finalmente redirigimos al home
   req.session.user = user;
-  res.redirect('/')
+  res.redirect('/') 
+
 });
 
 // 4. Ruta para cerrar sesión

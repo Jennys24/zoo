@@ -28,6 +28,7 @@ const User = sql.define('User', {
   email: {
     type: Sequelize.STRING,
     allowNull: false,
+    unique: true,
     validate: {
       notNull: {
         msg: 'Debe indicar un email'
