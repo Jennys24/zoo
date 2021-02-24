@@ -1,0 +1,67 @@
+      
+      <!-- Navar de Materialize-->
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">ZOO</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="sass.html">Sass</a></li>
+        <li><a href="badges.html">Components</a></li>
+        <li><a href="collapsible.html">JavaScript</a></li>
+      </ul>
+    </div>
+  </nav>
+      
+      <form id="form-login" action="/login" method="POST" class="col s6">
+        <h4>Ingrese a la plataforma</h4>
+        <div class="row">
+          <div class="input-field col s12">
+            <input name="email" type="email" class="validate" required>
+            <label for="email">Email</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <input name="password" type="password" class="validate" required>
+            <label for="email">Contraseña</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <input type="submit" class="waves-effect waves-light btn">
+          </div>
+        </div>
+      </form>
+
+      <!--Formulario con Materialize-->
+      <form id="form-register" action="/register" method="POST" class="col s6">
+        <h4>Registrese en nuestra plataforma</h4>
+        <div class="row">
+          <div class="input-field col s12">
+            <input name="name" type="text" class="validate" required>
+            <label for="email">Nombre</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <input name="email" type="email" class="validate" required>
+            <label for="email">Email</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <input name="password" id="password" type="password" class="validate" required>
+            <label for="email">Contraseña</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <input name="password_confirm" id="password_confirm" type="password" class="validate">
+            <label for="email">Confirme Contraseña</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <input type="submit" class="waves-effect waves-light btn">
+          </div>
+        </div>
+      </form>
